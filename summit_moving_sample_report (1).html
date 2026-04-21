@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Readiness Report – Summit Moving Co.</title>
+<meta name="description" content="A personalized AI Readiness Report for Summit Moving Co., prepared by Crane.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --purple: #4944D8;
+  --purple-light: #EEEDF7;
+  --purple-mid: #6B67E0;
+  --purple-dark: #3530B8;
+  --navy: #1B2A4A;
+  --navy-deep: #0F1A30;
+  --gold: #D4A853;
+  --gold-light: #FBF5E8;
+  --green: #2E7D32;
+  --green-light: #E8F5E9;
+  --amber: #E65100;
+  --amber-light: #FFF3E0;
+  --red: #C62828;
+  --gray-900: #1F1F1F;
+  --gray-700: #3D3D3D;
+  --gray-500: #6B6B6B;
+  --gray-400: #8E8E8E;
+  --gray-200: #E5E5E5;
+  --gray-100: #F5F5F5;
+  --gray-50: #FAFAFA;
+  --white: #FFFFFF;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--gray-900);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Top Banner ── */
+.top-banner {
+  background: var(--navy-deep);
+  color: var(--white);
+  padding: 14px 0;
+  border-bottom: 3px solid var(--purple);
+}
+
+.top-banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.top-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-banner-logo {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.top-banner-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255,255,255,0.2);
+}
+
+.top-banner-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
+
+.top-banner-date {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+}
+
+/* ── Hero ── */
+.hero { padding: 72px 0 56px; }
+
+.hero h1 {
+  font-size: clamp(32px, 5.5vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.hero-recipient {
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 500;
+  color: var(--gray-500);
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+
+.hero-subtitle {
+  font-size: clamp(17px, 2.1vw, 20px);
+  line-height: 1.5;
+  color: var(--gray-700);
+  max-width: 600px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.hero-subtitle-personal {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: clamp(14px, 1.7vw, 16px);
+  color: var(--gray-500);
+  font-weight: 400;
+}
+
+.hero-meta {
+  padding-top: 24px;
+  font-size: 13px;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.hero-meta strong { color: var(--gray-900); font-weight: 600; }
+.hero-meta-sep { color: var(--gray-400); padding: 0 10px; display: inline-block; }
+
+/* ── Section Base ── */
+section { padding: 56px 0; }
+
+.divider {
+  height: 1px;
+  background: var(--gray-200);
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--gray-500);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+  color: var(--gray-900);
+}
+
+.section-intro {
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.7;
+  color: var(--gray-500);
+  max-width: 640px;
+  margin-bottom: 36px;
+}
+
+/* ── "What AI Readiness means" intro block ── */
+.meaning-block {
+  background: var(--gray-50);
+  border-left: 4px solid var(--purple);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: clamp(28px, 4vw, 36px);
+  margin-bottom: 36px;
+}
+
+.meaning-block .meaning-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--purple);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.meaning-block h3 {
+  font-size: clamp(20px, 2.6vw, 24px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+  margin-bottom: 16px;
+}
+
+.meaning-block p {
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.7;
+  color: var(--gray-700);
+  margin-bottom: 14px;
+}
+
+.meaning-block p:last-child { margin-bottom: 0; }
+.meaning-block strong { color: var(--gray-900); font-weight: 700; }
+
+.conditions-list {
+  list-style: none;
+  margin: 16px 0 0;
+  counter-reset: condition;
+}
+
+.conditions-list li {
+  counter-increment: condition;
+  position: relative;
+  padding: 10px 0 10px 44px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--gray-700);
+  border-top: 1px solid var(--gray-200);
+}
+
+.conditions-list li:first-child { border-top: none; }
+
+.conditions-list li::before {
+  content: counter(condition);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 26px;
+  height: 26px;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.conditions-list li strong {
+  color: var(--gray-900);
+  font-weight: 700;
+}
+
+/* ── Score Card ── */
+.score-card {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+  border-radius: var(--radius-lg);
+  padding: clamp(36px, 5vw, 56px);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.score-card::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(73,68,216,0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.score-card-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(32px, 5vw, 56px);
+  align-items: center;
+}
+
+.score-number-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.score-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.5);
+}
+
+.score-number-wrap {
+  display: flex;
+  align-items: baseline;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.score-number {
+  font-size: clamp(80px, 14vw, 132px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  padding-right: 0.08em;
+  background: linear-gradient(180deg, #FFFFFF 0%, #B8B4F0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.score-max {
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 500;
+  color: rgba(255,255,255,0.4);
+  margin-left: 10px;
+}
+
+.score-band {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(212, 168, 83, 0.15);
+  border: 1px solid rgba(212, 168, 83, 0.3);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.score-band::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.score-description {
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  max-width: 420px;
+}
+
+/* Score legend */
+.score-legend {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-size: 12px;
+}
+
+.legend-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.legend-chip::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-chip.opportunity::before { background: var(--amber); }
+.legend-chip.foundation::before { background: var(--purple); }
+.legend-chip.scale::before { background: var(--green); }
+
+/* ── Condition cards (formerly category cards) ── */
+.conditions-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.condition-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.condition-card:hover {
+  border-color: var(--purple);
+  box-shadow: var(--shadow-sm);
+}
+
+.condition-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.condition-name-group {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.condition-number {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--purple);
+  letter-spacing: 0.06em;
+}
+
+.condition-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.condition-status {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.condition-status.opportunity {
+  color: var(--amber);
+  background: var(--amber-light);
+}
+
+.condition-status.foundation {
+  color: var(--purple);
+  background: var(--purple-light);
+}
+
+.condition-status.scale {
+  color: var(--green);
+  background: var(--green-light);
+}
+
+.condition-score {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
+}
+
+.condition-subtitle {
+  font-size: 13px;
+  color: var(--gray-500);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.condition-bar {
+  height: 6px;
+  background: var(--gray-100);
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.condition-bar-fill {
+  height: 100%;
+  background: var(--purple);
+  border-radius: 100px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.condition-bar-fill[data-score="weak"] { background: var(--amber); }
+.condition-bar-fill[data-score="strong"] { background: var(--green); }
+
+.condition-unlocks {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.condition-unlocks strong { color: var(--gray-900); font-weight: 600; }
+
+/* ── Magic Wand Quote ── */
+.magic-wand-quote {
+  position: relative;
+  padding: 28px clamp(24px, 5vw, 40px);
+  background: var(--purple-light);
+  border-left: 4px solid var(--purple);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 28px;
+}
+
+.magic-wand-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+.magic-wand-text {
+  font-size: clamp(17px, 2.2vw, 22px);
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--gray-900);
+  font-style: italic;
+}
+
+.insight-body {
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.75;
+  color: var(--gray-700);
+}
+
+.insight-body p { margin-bottom: 16px; }
+.insight-body p:last-child { margin-bottom: 0; }
+.insight-body strong { color: var(--gray-900); font-weight: 700; }
+
+.callout-block {
+  margin: 20px 0;
+  padding: 20px 24px;
+  background: var(--gray-50);
+  border-left: 3px solid var(--purple);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.callout-block .callout-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--purple);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.callout-block p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-900);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Status Structure ── */
+.status-section { background: var(--gray-50); }
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.status-block {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+}
+
+.status-block-label {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: var(--white);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.status-block.today .status-block-label { background: var(--gray-500); }
+.status-block.built .status-block-label { background: var(--green); }
+.status-block.next .status-block-label { background: var(--purple); }
+
+.status-block h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.status-block p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-700);
+  margin-bottom: 12px;
+}
+
+.status-block p:last-child { margin-bottom: 0; }
+.status-block strong { color: var(--gray-900); font-weight: 600; }
+
+.status-built-list {
+  list-style: none;
+  margin: 16px 0 0;
+}
+
+.status-built-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--gray-100);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+.status-built-list li:first-child { border-top: none; padding-top: 4px; }
+.status-built-list li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--green-light);
+  border-radius: 50%;
+  margin-top: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%232E7D32' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px;
+}
+
+.status-built-list li strong { color: var(--gray-900); }
+
+/* ── Target Outcome Banner ── */
+.outcome-banner {
+  background: linear-gradient(135deg, var(--gold-light) 0%, #FDF9E8 100%);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 5vw, 40px);
+  margin-bottom: 28px;
+}
+
+.outcome-label {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: var(--navy-deep);
+  background: var(--gold);
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.outcome-title {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.outcome-description {
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.65;
+  color: var(--gray-700);
+}
+
+.outcome-description strong { color: var(--gray-900); font-weight: 700; }
+
+/* ── Core modules ── */
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.module-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: clamp(24px, 4vw, 32px);
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: clamp(16px, 3vw, 24px);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.module-card:hover {
+  border-color: var(--purple);
+  box-shadow: var(--shadow-sm);
+}
+
+.module-number {
+  width: 44px;
+  height: 44px;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.module-content h3 {
+  font-size: clamp(18px, 2.2vw, 21px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+}
+
+.module-role {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.module-description {
+  font-size: clamp(14px, 1.7vw, 15px);
+  line-height: 1.7;
+  color: var(--gray-700);
+}
+
+.module-description strong { color: var(--gray-900); font-weight: 700; }
+
+/* ── "Also included" section ── */
+.also-included {
+  margin-top: 36px;
+  padding: clamp(28px, 4vw, 36px);
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+}
+
+.also-included-header {
+  margin-bottom: 20px;
+}
+
+.also-included-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+
+.also-included-title {
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.also-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.also-item {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 18px 22px;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.also-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--purple-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple);
+  flex-shrink: 0;
+}
+
+.also-icon svg { width: 18px; height: 18px; }
+
+.also-item h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 3px;
+}
+
+.also-item p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--gray-500);
+}
+
+/* ── CTA ── */
+.cta-section { background: var(--gray-50); }
+
+.cta-card {
+  background: var(--white);
+  border: 2px solid var(--purple);
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 5vw, 48px);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+.cta-title {
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.cta-subtitle {
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.65;
+  color: var(--gray-700);
+  margin-bottom: 28px;
+  max-width: 560px;
+}
+
+.cta-subtitle strong { color: var(--gray-900); font-weight: 700; }
+
+.price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.price-original {
+  font-size: clamp(32px, 4.5vw, 44px);
+  font-weight: 800;
+  color: var(--gray-400);
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--red);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.price-new {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--purple);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.cta-includes h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-500);
+  margin-bottom: 16px;
+}
+
+.includes-list {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.includes-list li {
+  position: relative;
+  padding: 11px 0 11px 32px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.includes-list li:last-child { border-bottom: none; }
+
+.includes-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  background: var(--purple-light);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234944D8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px;
+}
+
+.includes-list li strong { color: var(--gray-900); font-weight: 700; }
+
+.cta-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 28px;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(73,68,216,0.25);
+  font-family: inherit;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.btn-primary:hover {
+  background: var(--purple-mid);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(73,68,216,0.35);
+}
+
+.btn-primary svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 28px;
+  background: transparent;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gray-400);
+  color: var(--gray-900);
+}
+
+.cta-footnote {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-100);
+  font-size: 13px;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+/* ── Referral Section ── */
+.referral-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 5vw, 40px);
+  text-align: center;
+}
+
+.referral-card h3 {
+  font-size: clamp(20px, 2.8vw, 26px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.referral-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--gray-500);
+  max-width: 520px;
+  margin: 0 auto 20px;
+}
+
+.referral-incentive {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: var(--white);
+  border: 1px solid var(--purple);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.referral-incentive svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+@media (max-width: 560px) {
+  .referral-incentive {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 14px;
+    padding: 14px 18px;
+    text-align: left;
+    max-width: 100%;
+  }
+  .referral-incentive svg { margin-top: 2px; }
+}
+
+.referral-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-share {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: var(--purple);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-share:hover {
+  background: var(--purple-mid);
+  transform: translateY(-1px);
+}
+
+.btn-share svg { width: 16px; height: 16px; }
+
+/* ── Footer ── */
+footer {
+  padding: 40px 0 32px;
+  background: var(--navy-deep);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+}
+
+footer p { font-size: 13px; line-height: 1.6; }
+footer p + p { margin-top: 6px; }
+footer strong { color: var(--white); font-weight: 600; }
+footer a { color: var(--gold); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* ── Responsive: Tablet ── */
+@media (max-width: 900px) {
+  .score-card-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 640px) {
+  .container { padding: 0 20px; }
+  .top-banner { padding: 12px 0; }
+  .top-banner .container { gap: 8px; }
+  .top-banner-logo { font-size: 16px; }
+  .top-banner-label, .top-banner-date { font-size: 12px; }
+  .hero { padding: 48px 0 40px; }
+  section { padding: 44px 0 !important; }
+  .meaning-block { padding: 24px 22px; }
+  .score-card { padding: 32px 24px; }
+  .condition-card { padding: 20px 22px; }
+  .module-card { grid-template-columns: 1fr; gap: 14px; padding: 24px 22px; }
+  .module-number { width: 40px; height: 40px; font-size: 18px; }
+  .outcome-banner { padding: 28px 22px; }
+  .status-block { padding: 24px 22px; }
+  .also-included { padding: 24px 22px; }
+  .also-item { padding: 16px 18px; gap: 14px; }
+  .cta-card { padding: 32px 24px; }
+  .price-block { gap: 12px; margin-bottom: 24px; padding-bottom: 24px; }
+  .cta-actions { flex-direction: column; }
+  .btn-primary, .btn-secondary { width: 100%; padding: 15px 24px; font-size: 15px; }
+  .btn-share { width: 100%; }
+  .referral-actions { flex-direction: column; }
+}
+
+@media (max-width: 400px) {
+  .hero-meta-sep { display: none; margin: 0; }
+  .hero-meta { line-height: 1.8; }
+}
+
+@media print {
+  .top-banner, .referral-card, .cta-actions { display: none; }
+  body { background: white; }
+  section { padding: 24px 0; page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- Top Banner -->
+<div class="top-banner">
+  <div class="container">
+    <div class="top-banner-left">
+      <div class="top-banner-logo">Crane</div>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>AI Readiness Report</h1>
+    <div class="hero-recipient">For Summit Moving Co.</div>
+    <p class="hero-subtitle">Your on-ramp to using AI effectively in your business.<br><span class="hero-subtitle-personal">Based on your AI Readiness Check answers.</span></p>
+    <div class="hero-meta">
+      Prepared by <strong>Andrew @ Crane</strong> &nbsp;·&nbsp; April 2026
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- What AI Readiness Means + Score -->
+<section>
+  <div class="container">
+    <div class="section-label">Start here</div>
+    <h2 class="section-title">What "AI Readiness" actually means</h2>
+
+    <div class="meaning-block">
+      <p>AI Readiness isn't about whether you use ChatGPT. It's about <strong>whether your business is set up to actually benefit from AI</strong> – so it can save you time, make you money, and give you leverage on the work you're already doing.</p>
+
+      <p>For that to happen, five things need to be in place:</p>
+
+      <ul class="conditions-list">
+        <li><strong>Your data is usable.</strong> AI can't help if your customer list lives in someone's head.</li>
+        <li><strong>You know where your time is going.</strong> Repetitive tasks you can name are tasks you can delegate.</li>
+        <li><strong>You know your customers.</strong> Who they are, what they want, and how to reach them. AI can't help you serve people you don't understand.</li>
+        <li><strong>There's a clear way you do things.</strong> AI amplifies what's repeatable. If your methods live in one person's head, there's nothing to amplify yet.</li>
+        <li><strong>You have momentum.</strong> You've tried a few things, you're curious, and you want to move. This is the input that makes the rest of the system actually get used.</li>
+      </ul>
+
+      <p style="margin-top: 16px;">Your score below reflects how close Summit Moving is to those five conditions today. <strong>The lower the number, the more leverage a small change can unlock.</strong></p>
+    </div>
+
+    <div class="score-card">
+      <div class="score-card-inner">
+        <div class="score-number-col">
+          <div class="score-label">Your AI Readiness Score</div>
+          <div class="score-number-wrap">
+            <span class="score-number">67</span><span class="score-max">/ 100</span>
+          </div>
+        </div>
+        <div>
+          <div class="score-band">Ready to Accelerate</div>
+          <p class="score-description">This is your composite score – the weighted average of the five conditions below. "Ready to Accelerate" is the top band, which means your foundations are solid enough that adding AI produces leverage instead of exposing gaps. What matters more than the number is the shape underneath: your strengths and your gaps sit in specific places, and the on-ramp is built around closing those gaps without touching what's already working.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top: 40px; margin-bottom: 12px;">The five conditions behind your score</div>
+    <p style="font-size: 14px; color: var(--gray-500); margin-bottom: 20px; max-width: 620px;">Each condition is scored independently and falls into one of three bands:</p>
+
+    <div class="score-legend">
+      <span class="legend-chip opportunity">0-50 · Opportunity</span>
+      <span class="legend-chip foundation">50-70 · Foundation in place</span>
+      <span class="legend-chip scale">70+ · Ready to scale</span>
+    </div>
+
+    <div class="conditions-grid">
+      <div class="condition-card">
+        <div class="condition-header">
+          <div class="condition-name-group">
+            <div class="condition-number">01</div>
+            <div class="condition-name">Your data is usable</div>
+            <span class="condition-status scale">Ready to scale</span>
+          </div>
+          <div class="condition-score">80</div>
+        </div>
+        <div class="condition-subtitle">Can AI work with what you already have?</div>
+        <div class="condition-bar"><div class="condition-bar-fill" data-score="strong" style="width: 80%"></div></div>
+        <div class="condition-unlocks"><strong>Your reality:</strong> stronger than you'd probably rate yourself. Your customer list is clean and current, your team reviews financial reports regularly, and the data you need exists. What you don't have is a single place where all of it connects – which is exactly what your magic wand answer pointed to. This isn't a data problem, it's a fragmentation problem, and that's a much faster thing to fix.</div>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-header">
+          <div class="condition-name-group">
+            <div class="condition-number">02</div>
+            <div class="condition-name">You know where your time is going</div>
+            <span class="condition-status opportunity">Opportunity</span>
+          </div>
+          <div class="condition-score">47</div>
+        </div>
+        <div class="condition-subtitle">Do you know what's eating your hours?</div>
+        <div class="condition-bar"><div class="condition-bar-fill" data-score="weak" style="width: 47%"></div></div>
+        <div class="condition-unlocks"><strong>Your reality:</strong> you named it clearly – paperwork and admin, quoting and sales, and managing the crew – with paperwork and admin as the single biggest operational headache. That clarity is an asset. The reason this isn't higher is that you also told us you often feel like you're making decisions without enough information – which usually means the data exists somewhere, it's just not reaching you in time.</div>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-header">
+          <div class="condition-name-group">
+            <div class="condition-number">03</div>
+            <div class="condition-name">You know your customers</div>
+            <span class="condition-status scale">Ready to scale</span>
+          </div>
+          <div class="condition-score">85</div>
+        </div>
+        <div class="condition-subtitle">Do you know who they are, what they want, and how to reach them?</div>
+        <div class="condition-bar"><div class="condition-bar-fill" data-score="strong" style="width: 85%"></div></div>
+        <div class="condition-unlocks"><strong>Your reality:</strong> this is the strongest part of the business by a wide margin. Your customer list is clean enough to act on tomorrow. A team member handles reviews regularly, you have a real system for asking satisfied customers for referrals, and new customers come in through a mix of channels. The on-ramp keeps this strength untouched and connects it to everything else.</div>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-header">
+          <div class="condition-name-group">
+            <div class="condition-number">04</div>
+            <div class="condition-name">There's a clear way you do things</div>
+            <span class="condition-status opportunity">Opportunity</span>
+          </div>
+          <div class="condition-score">50</div>
+        </div>
+        <div class="condition-subtitle">Are your methods repeatable enough for AI to amplify?</div>
+        <div class="condition-bar"><div class="condition-bar-fill" data-score="weak" style="width: 50%"></div></div>
+        <div class="condition-unlocks"><strong>Your reality:</strong> you told us there are a few SOPs, but they're outdated or incomplete – and if a key employee left tomorrow, a lot of institutional knowledge would walk out with them. For a 50+ person operation, that's the single biggest risk on this report and the single biggest unlock. AI is very good at turning tribal knowledge into written, repeatable process – but it needs something to work from. Closing this gap is what makes every other module multiply.</div>
+      </div>
+
+      <div class="condition-card">
+        <div class="condition-header">
+          <div class="condition-name-group">
+            <div class="condition-number">05</div>
+            <div class="condition-name">You have momentum</div>
+            <span class="condition-status scale">Ready to scale</span>
+          </div>
+          <div class="condition-score">70</div>
+        </div>
+        <div class="condition-subtitle">Have you already started moving toward AI?</div>
+        <div class="condition-bar"><div class="condition-bar-fill" data-score="strong" style="width: 70%"></div></div>
+        <div class="condition-unlocks"><strong>Your reality:</strong> some people on the team already use AI occasionally and the business is "curious but cautious" – a healthy, realistic starting point. The fact that the owner is the one taking this check personally is an even stronger signal. The on-ramp gives that curiosity a concrete place to go.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Headline Insight -->
+<section>
+  <div class="container">
+    <div class="section-label">The central insight</div>
+    <h2 class="section-title">You told us exactly what you want.</h2>
+
+    <div class="magic-wand-quote">
+      <div class="magic-wand-label">Your magic wand answer</div>
+      <div class="magic-wand-text">"Assort all client related data and store it in easily accessible document or app."</div>
+    </div>
+
+    <div class="insight-body">
+      <p>Specific, grounded, and solvable. It's also what the rest of this report is built around.</p>
+
+      <div class="callout-block">
+        <span class="callout-label">The pattern behind the answer</span>
+        <p>You told us client data lives across spreadsheets, a CRM, and email inboxes – some of it clean, some of it a mess. You also told us your biggest operational headache is paperwork and admin, and that you often feel like you're making decisions without enough information. These are the same problem told three different ways.</p>
+      </div>
+
+      <p>When client data is scattered, every downstream task gets harder. Work takes longer than it should because context has to be reassembled each time, and decisions feel uncertain because the answer is somewhere in the pile – just not in front of you.</p>
+
+      <p>Summit Moving already has more raw material than most businesses we see. 50+ people, a real CRM, a clean and current customer list, a team that reviews financial reports regularly, reviews handled, referrals handled. On the diagnostic, you scored in the top band – "Ready to Accelerate." <strong>What's missing isn't data, and it isn't the customer side. It's a single place where everything connects, a way to get your SOPs out of people's heads, and an AI workspace your team can actually use.</strong> That's what the three modules below are built to deliver – and together they're the unlock for the paperwork headache, the decision-making gap, and the magic wand all at once.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Status Structure -->
+<section class="status-section">
+  <div class="container">
+    <div class="section-label">The full picture</div>
+    <h2 class="section-title">Where things stand</h2>
+
+    <div class="status-grid">
+      <div class="status-block today">
+        <div class="status-block-label">Today</div>
+        <h3>Your current reality</h3>
+        <p>Your underlying data is in good shape — clean customer list, reviews handled, referral system in place, financials reviewed regularly. The issue is that it's split across spreadsheets, a CRM, and email, so the documents and coordination every move generates – quotes, COIs, compliance, follow-ups – eat the day. SOPs exist but are outdated, and key knowledge lives in people's heads.</p>
+      </div>
+
+      <div class="status-block built">
+        <div class="status-block-label">Delivered with this report</div>
+        <h3>A Google Reviews intelligence dashboard</h3>
+        <p>Attached alongside this report. Your business runs on word of mouth and reputation, and your online reviews are the most visible record of that reputation – so we turned them into a usable asset. We pulled your public Google reviews and built a simple Excel dashboard: ratings and volume over time, the themes your customers actually bring up unprompted, and review-by-review detail you can pull quotes from for proposals, your website, or social. Formula-driven and easy to refresh – about five minutes whenever you want fresh numbers.</p>
+        <p><strong>Yours to keep regardless of what happens next.</strong></p>
+      </div>
+
+      <div class="status-block next">
+        <div class="status-block-label">What's Next</div>
+        <h3>The on-ramp we'd build with you</h3>
+        <p>A focused, three-module on-ramp built around a single source of truth for client data: a unified client data hub that finally connects everything, a process capture system that gets the workflows in your team's heads into real documents, and a personal AI assistant configured for Summit Moving. Paperwork and admin get addressed through the client data work itself — the real bottleneck was never the templates, it was the context those templates couldn't see.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Modules / On-Ramp Section -->
+<section>
+  <div class="container">
+    <div class="section-label">The build</div>
+    <h2 class="section-title">Your AI On-Ramp</h2>
+    <p class="section-intro">This is one connected system. Each piece builds on the last, and together they close the gaps on the five conditions above.</p>
+
+    <!-- Target Outcome Banner -->
+    <div class="outcome-banner">
+      <div class="outcome-label">Target Outcome</div>
+      <div class="outcome-title">Unified Client Operations System</div>
+      <div class="outcome-description">One place where client data, paperwork, and process actually connect – so the answer to "what's the status of X" takes seconds, not an email search. Built directly around your magic wand: all client-related data, assorted and accessible. <strong>This is what the on-ramp produces once the foundation is in place.</strong></div>
+    </div>
+
+    <!-- 4 core modules -->
+    <div class="modules-list">
+      <div class="module-card">
+        <div class="module-number">1</div>
+        <div class="module-content">
+          <h3>Unified Client Data Hub</h3>
+          <div class="module-role">Data upgrade · Foundation</div>
+          <p class="module-description">Pull client data out of the spreadsheets, the CRM, and the email inboxes and consolidate it into a single clean system of record. Enriched with the things that actually matter for a moving and storage operation – move history, storage units on hand, job value, open COIs and claims, and where each customer sits in the post-move follow-up sequence. Built to stay in sync with your existing CRM rather than replace it. This is also what would make your existing quote templates start working the way you expected them to when you built them – the context they're missing today starts living in one place. <strong>The direct answer to your magic wand, and the foundation the rest of the on-ramp sits on.</strong></p>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-number">2</div>
+        <div class="module-content">
+          <h3>Process Capture System</h3>
+          <div class="module-role">Workflow · Risk reduction</div>
+          <p class="module-description">You told us SOPs are few, outdated, or incomplete – and that significant institutional knowledge would walk out the door if a key employee quit tomorrow. For a 50+ person operation, this is the single biggest hidden risk. This module uses AI to interview your key people in short structured sessions and turn what they do into clean, living SOPs – capturing the workflows that currently only exist in heads: how you dispatch crews on move day, how you price the tricky jobs, how you handle difficult building managers, how a damage claim actually gets resolved. <strong>Turns your biggest risk into a repeatable system, and gives every other AI module something real to work from.</strong></p>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-number">3</div>
+        <div class="module-content">
+          <h3>Personal AI Assistant Setup</h3>
+          <div class="module-role">Starter · On-ramp for the team</div>
+          <p class="module-description">An AI workspace configured specifically for Summit Moving – loaded with your services, service areas, pricing logic, common client questions, compliance context, and voice. The specific tool we use (Claude, ChatGPT, or something else) is a decision we'd make together based on what fits best. Ready to draft quote language, COI request responses, crew communications, post-move follow-ups, and the back-and-forth admin that eats the day. Set up for you first, then extended to the team as the "curious but cautious" posture turns into confidence. <strong>This is how the team starts using AI on day one without staring at a blank box.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Also Included -->
+    <div class="also-included">
+      <div class="also-included-header">
+        <div class="also-included-label">Also included with every AI On-Ramp</div>
+        <div class="also-included-title">The pieces that make it all usable</div>
+      </div>
+
+      <div class="also-items">
+        <div class="also-item">
+          <div class="also-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div>
+            <h4>Quick Wins guide</h4>
+            <p>Three specific things you can start doing in your first 48 hours, before the full system is even built out.</p>
+          </div>
+        </div>
+
+        <div class="also-item">
+          <div class="also-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div>
+            <h4>Starter templates &amp; prompts</h4>
+            <p>A pack of prompts and templates for your most common tasks – quote drafts, client emails, scope writing, material research. Loaded with Summit Moving's voice and context.</p>
+          </div>
+        </div>
+
+        <div class="also-item">
+          <div class="also-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <h4>AI usage guidelines</h4>
+            <p>A simple policy document for using AI across the business – what it's OK to use for, what it isn't, and how to do it safely. Useful for you on your own, and for anyone on the team who starts using it too.</p>
+          </div>
+        </div>
+
+        <div class="also-item">
+          <div class="also-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h4>Vendor selection framework</h4>
+            <p>A framework for evaluating new AI tools as they come out – because they come out weekly. So you don't waste money on the wrong ones, and you know what to ask every vendor.</p>
+          </div>
+        </div>
+
+        <div class="also-item">
+          <div class="also-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <h4>Quarterly AI update brief</h4>
+            <p>A short quarterly note from Crane with what's new in AI, what matters for Summit Moving specifically, and whether it's worth your time. So you stay current without doing the research yourself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-label">Your path forward</div>
+      <h2 class="cta-title">Your AI On-Ramp</h2>
+      <p class="cta-subtitle">This is the on-ramp we'd build with you – scoped to what your business actually needs, not a one-size package.</p>
+
+      <div class="price-block">
+        <div style="font-size: 14px; color: var(--gray-500); font-weight: 500;">Final pricing determined after a 20-minute walkthrough.</div>
+      </div>
+
+      <div class="cta-includes">
+        <h4>What you get</h4>
+        <ul class="includes-list">
+          <li><strong>Unified Client Data Hub:</strong> the single place where every client record actually connects</li>
+          <li><strong>Process Capture System:</strong> the workflows in your team's heads, captured as living SOPs</li>
+          <li><strong>Personal AI Assistant Setup:</strong> an AI workspace configured for Summit Moving, ready on day one</li>
+          <li><strong>Quick Wins guide + starter templates &amp; prompts:</strong> so the team can start leveraging AI right away</li>
+          <li><strong>AI usage guidelines:</strong> for you and your team</li>
+          <li><strong>Vendor selection framework + quarterly AI update brief:</strong> so you stay ahead</li>
+        </ul>
+      </div>
+
+      <div class="cta-actions">
+        <a href="https://cal.com/with-crane/ai-readiness-report-review" target="_blank" rel="noopener" class="btn-primary">
+          Book a 20-min call to walk through this together
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a href="mailto:andrew@gowithcrane.com?subject=Re:%20AI%20Readiness%20Report" class="btn-secondary">Reply with questions</a>
+      </div>
+
+      <div class="cta-footnote">
+        On the call, we'll walk through this personalized report and plan in more depth, answer any questions, and figure out the right next step for Summit Moving.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Referral Section -->
+<section>
+  <div class="container">
+    <div class="referral-card">
+      <h3>Know another business owner who'd find this useful?</h3>
+      <p>If there are other business owners you think would benefit from an AI Readiness Check and a personalized report, tell us who they are. We'll reach out personally and mention you made the introduction.</p>
+
+      <div class="referral-incentive">
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        Earn $100 for every successful referral that signs up for a paid package.
+      </div>
+
+      <div class="referral-actions">
+        <a href="https://tally.so/r/0QJMOP" target="_blank" rel="noopener" class="btn-share">
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+          Submit a referral
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>Prepared personally by <strong>Andrew @ Crane</strong> for Summit Moving Co. · April 2026</p>
+    <p>Questions? <a href="mailto:andrew@gowithcrane.com">andrew@gowithcrane.com</a></p>
+    <p style="margin-top: 20px; font-size: 12px;">&copy; 2026 Unlock Ventures, Inc. (Crane). All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+const bars = document.querySelectorAll('.condition-bar-fill');
+const observer = new IntersectionObserver((entries) => {
+  entr
